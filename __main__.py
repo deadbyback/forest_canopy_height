@@ -24,7 +24,7 @@ def clip_and_save_by_country(input_window_transform, input_country_data, input_w
     updated_geom = country_geom_clipped.geometry.iloc[0]
 
     mask_data = geometry_mask([updated_geom], out_shape=(tile_size, tile_size), transform=input_window_transform)
-    clipped_data = np.where(mask_data, input_window_data, np.nan)
+    clipped_data = np.where(mask_data, 103, input_window_data)
 
     folder_name = create_country_folder(country_name, "temp")
     raw_filename = "output_{}_{}.tif".format(def_x, def_y)
@@ -113,8 +113,8 @@ def reclassify_country_file(tif_data):
 
 
 if __name__ == '__main__':
-    raster_path = r'C:\Users\Dead_\PycharmProjects\forest_canopy\data\Forest_height_2019_NAFR.tif'
-    bounds_path = r'C:\Users\Dead_\PycharmProjects\forest_canopy\data\boundaries\WB_countries_Admin0_10m.shp'
+    raster_path = r'C:\Users\Dead_\PycharmProjects\forest_canopy_height\data\Forest_height_2019_AUS.tif'
+    bounds_path = r'C:\Users\Dead_\PycharmProjects\forest_canopy_height\data\boundaries\WB_countries_Admin0_10m.shp'
 
     tile_size = 25000
 
