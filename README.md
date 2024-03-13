@@ -18,6 +18,8 @@ for the surrounding area within the resulting BBOX.
 
 The second iteration accounted for and fixed a bug in the creation of the country mask.
 
+Some of the files are located on my [Google Drive](https://drive.google.com/drive/folders/1lXHuFrD9ha_rTrLz5CJvSxHMJM_Z_mFQ?usp=sharing) (read access granted).
+
 ## Classification of image data
 
 Initially the raster has the following scale:
